@@ -18,8 +18,8 @@ function welcome() {
     }
     
     return (
-        <div className="flex-col gap-8 md:flex">
-            <div>
+        <div className="flex-col gap-4 md:gap-8 md:flex">
+            <div className="flex justify-center md:justify-start mb-4">
                 <Image width={182} height={182} alt="cake img" src={cake} priority />
             </div>
             <div className="flex flex-col gap-8">
@@ -35,6 +35,7 @@ function welcome() {
                     </div>
                     <Link
                         onMouseOver={handler}
+                        onTouchStartCapture={handler}
                         href={{
                             pathname: '/menus/isBirthday',
                             query: data
