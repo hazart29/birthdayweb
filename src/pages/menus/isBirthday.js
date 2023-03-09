@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+import Link from "next/link";
 import moment from 'moment/moment'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react';
@@ -44,7 +45,13 @@ export default function isBirthday() {
 
     return (
         <div id="main-content" className="flex flex-col gap-8 justify-center items-center h-screen">
-            <p id='ucapan'></p>
+            <p id='ucapan' className="text-3xl font-bold"></p>
+            <Link
+                href={{
+                    pathname: '/menus/getGift',
+                }}
+                className=" hover:bg-black text-black hover:text-white rounded-full outline outline-2 p-2"
+            >Lets Get The Gift!</Link>
         </div>
     )
 }

@@ -18,7 +18,7 @@ function welcome() {
     }
     
     return (
-        <div className="flex gap-8">
+        <div className="flex-col gap-8 md:flex">
             <div>
                 <Image width={182} height={182} alt="cake img" src={cake} priority />
             </div>
