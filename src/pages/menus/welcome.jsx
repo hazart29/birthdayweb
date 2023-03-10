@@ -19,10 +19,10 @@ function welcome() {
     
     return (
         <div className="flex-col gap-4 md:flex">
-            <div className="flex justify-center md:justify-start mb-4">
+            <div className="flex justify-center md:justify-start">
                 <Image width={182} height={182} alt="cake img" src={cake} priority />
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 bg-white rounded-lg p-4">
                 <div id="welcome-text">
                     <p>Birthday Web Page</p>
                     <p className="text-3xl font-bold
@@ -42,6 +42,7 @@ function welcome() {
                         }}
                         className=" hover:bg-black text-black hover:text-white rounded-full outline outline-2 p-2"
                     >Check Now!</Link>
+                    <p className="text-xs text-gray-400 text-center pt-2">made by @hazart29</p>
                 </div>
             </div>
         </div>

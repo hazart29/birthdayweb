@@ -3,6 +3,7 @@ import Link from "next/link";
 import moment from 'moment/moment'
 import { useRouter } from 'next/router'
 import BtnGift from "./btnGift";
+import BtnBack from "./btnBack";
 import React, { useEffect, useState } from 'react';
 
 
@@ -38,12 +39,14 @@ export default function isBirthday() {
     function setUcapan() {
         const p = document.getElementById('ucapan')
         const b = document.getElementById('btngift')
+        const c = document.getElementById('btnback')
 
         if (birthday === date) {
             p.innerText = 'HELLO ' + username + ' WE WISH YOU HAPPY BIRTHDAY ON ' + birthday
             b.className = 'flex'
         } else {
             p.innerText = 'SORRY, YOU DONT HAVE BIRTHDAY TODAY'
+            c.className = 'flex'
         }
     }
 
@@ -51,6 +54,7 @@ export default function isBirthday() {
         <div id="main-content" className="flex flex-col gap-8 justify-center text-center items-center h-screen">
             <p id='ucapan' className="text-3xl font-bold"></p>
             <div className=" hidden" id="btngift"><BtnGift/></div>
+            <div className=" hidden" id="btnback"><BtnBack/></div>
         </div>
     )
 }
